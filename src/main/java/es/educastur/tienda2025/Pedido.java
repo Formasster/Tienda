@@ -8,9 +8,9 @@ public class Pedido {
     private String idPedido;
     private Cliente clientePedido;
     private LocalDate fechaPedido;
-    private ArrayList <LineaPedido> cestaCompra
+    private ArrayList <LineaPedido> cestaCompra;
 
-    public Pedido(String idPedido, Cliente clientePedido, LocalDate fechaPedido) {
+    public Pedido(String idPedido, Cliente clientePedido, LocalDate fechaPedido, ArrayList<LineaPedido> cestaCompra) {
         this.idPedido = idPedido;
         this.clientePedido = clientePedido;
         this.fechaPedido = fechaPedido;
@@ -27,7 +27,7 @@ public class Pedido {
         return fechaPedido;
     }
     public ArrayList<LineaPedido> getLineaPedido() {
-        return lineaPedido;
+        return cestaCompra;
     }
 
     public void setIdPedido(String idPedido) {
@@ -39,8 +39,8 @@ public class Pedido {
     public void setFechaPedido(LocalDate fechaPedido) {
         this.fechaPedido = fechaPedido;
     }
-    public void setLineaPedido(ArrayList<LineaPedido> lineaPedido) {
-        this.lineaPedido = lineaPedido;
+    public void setLineaPedido(ArrayList<LineaPedido> cestaCompra) {
+        this.cestaCompra = cestaCompra;
     }
 
    @Override
